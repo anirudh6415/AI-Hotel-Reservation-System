@@ -72,7 +72,7 @@ class ModelTraining:
 
             logger.info("Hyperparameter tuning completed")
             results_random_df = pd.DataFrame(random_search.cv_results_)
-            logger.info(f"Hyperparameter Models: \n{results_random_df.to_string()}")
+            # logger.info(f"Hyperparameter Models: \n{results_random_df.to_string()}")
 
             best_params = random_search.best_params_
             best_lgbm_model = random_search.best_estimator_

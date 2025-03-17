@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: flex-start; /* Align container to the top */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding-top: 20px; /* Add space from the top */
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the container */
+    box-sizing: border-box;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+}
+
+/* Form Styling */
+.form-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #6e8efb;
+    outline: none;
+    box-shadow: 0 0 5px rgba(110, 142, 251, 0.5);
+}
+
+button {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #a777e3;
+}
+
+/* Result Styling */
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.result p {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.result p:nth-child(1) {
+    background: #ff4d4d;
+    color: white;
+}
+
+.result p:nth-child(2) {
+    background: #4caf50;
+    color: white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .container {
+        width: 90%;
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}

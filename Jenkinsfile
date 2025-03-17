@@ -14,19 +14,21 @@ pipeline{
                 }
             }
         }
-    }
 
-    stage('Setting Up Virtual Environment and Installing Dependancies'){
-        steps{
-            script{
-                echo 'Setting Up Virtual Environment and Installing Dependancies............'
-                sh ''' 
-                python -m venv ${VENV_DIR}
-                . ${VENV_DIR}/bin/activate
-                pip install --upgrade pip
-                pip install -e .
-                '''
+        stage('Setting Up Virtual Environment and Installing Dependancies'){
+            steps{
+                script{
+                    echo 'Setting Up Virtual Environment and Installing Dependancies............'
+                    sh ''' 
+                    python -m venv ${VENV_DIR}
+                    . ${VENV_DIR}/bin/activate
+                    pip install --upgrade pip
+                    pip install -e .
+                    '''
+                }
             }
         }
     }
+
+    
 }
